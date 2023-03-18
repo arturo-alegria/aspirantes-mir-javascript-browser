@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mayúsculas</title>
+  </head>
+  <body>   
+    <label for="texto">Escribe algo:</label>
+    <input type="text" id="texto">
+    <button class="btn", id="boton">Convertir mensaje a mayusculas</button>
+    <!-- aca va el resultado tal cual se escribe -->
+    <p id="resultado"></p>
+    <!-- aca va el resultado en mayusculas -->
+    <p id="resultadoMayusculas"></p>
+
+    <script>
+        const input = document.querySelector('#texto'); 
+        const resultado = document.querySelector('#resultado');
+        const boton = document.querySelector('#boton');
+        const resultadoMayusculas = document.querySelector('#resultadoMayusculas');
+        
+        input.addEventListener('input', function(){
+          const texto = input.value;
+          resultado.textContent = texto;
+        })
+
+        boton.addEventListener('click', function(){//input.addEventListener('input', function() {
+        // Código para convertir el texto a mayúsculas y mostrarlo en el párrafo
+        const text = input.value.toUpperCase();
+        resultadoMayusculas.textContent = text;
+        // Código para mostrar el texto en el párrafo
+        });
+    </script>
+  </body>
+  
+</html>
